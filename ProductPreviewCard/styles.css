@@ -1,0 +1,147 @@
+:root{
+--Dark-cyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+--dark-blue: hsl(212, 21%, 14%);
+--grayish-blue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+
+}
+
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    min-height:100vh;
+    font-size: 14px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--Cream);
+    font-family: 'Montserrat', sans-serif;  
+}
+
+.card{
+    background-color: var(--White);
+    display: flex;
+    justify-content: center;
+    width:95vw;
+    height:70vh;
+    max-width:700px;
+    max-height:520px;
+    border-radius: 0.5rem;
+    
+}
+
+.prod-image{
+    width:50%;
+}
+
+.prod-image img{
+    width:100%;
+    height:100%;
+    border-radius: 0.5rem 0 0 0.5rem;
+    
+}
+
+.prod-info{
+    width:50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:2rem;
+
+    
+}
+
+.prod-category{
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    color:var(--grayish-blue);
+    
+}
+
+.prod-name{
+    font-size:2.8rem;
+    color:var(--dark-blue);
+    font-family: 'Fraunces', serif;
+    line-height: 2.6rem;
+}
+
+.prod-description{
+    font-size: 1.1rem;
+    color:var(--grayish-blue);
+    line-height: 1.6rem;
+    
+}
+
+.prod-price{
+    color:var(--Dark-cyan);
+    display: flex;
+    align-items: center;
+    gap:1.2rem;
+    
+}
+
+.new-price{
+    font-size:2rem;
+    font-weight: bold;
+    font-family: 'Fraunces', serif;
+}
+
+.old-price{
+    font-size:0.8rem;
+    text-decoration: line-through;
+    color:var(--grayish-blue);
+}
+
+.add-to-cart{
+    color:var(--White);
+    background-color: var(--Dark-cyan);
+    box-sizing: border-box;
+    padding:1rem 1.2rem;
+    border-radius: 0.8rem;
+    border:none;
+    font-size:1rem;
+    display:flex;
+    justify-content: center;
+    gap:0.8rem;
+    
+}
+@media screen and (max-width:480px){
+    body{
+        font-size:12px;
+        
+    }
+    .card{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width:300px;
+        min-height:600px;
+        width:90vw;
+        height:80vh;
+
+
+    }
+    .prod-image{
+       width:100%;
+       height:35%;
+   }
+    
+    .prod-image img{
+        width:100%;
+        border-radius:0.5rem 0.5rem 0 0;
+
+    }
+    .prod-info{
+        width:80%;
+        height:65%;
+        padding:1rem;
+        
+    }
+    .prod-name{
+    font-size:2rem;
+    }
+}
